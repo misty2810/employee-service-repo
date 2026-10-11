@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto21
+  build:
+    commands:
+      - echo Building, testing and packaging the application
+      - mvn clean package -DskipTests
+
+artifacts:
+  files:
+    - target/*.jar
+  discard-paths: yes
